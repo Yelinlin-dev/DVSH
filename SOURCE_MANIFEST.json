@@ -1,0 +1,57 @@
+{
+  "packaged_on": "2026-10-25",
+  "source_version": "Current MSSR v5 workspace; not an exact archived 2026-10-05 snapshot",
+  "source_sha256": {
+    "mssr_v5/aligned_fast.py": "65da80533b452c4072ab5372fe6b3ffae48aa48d937790e20a3d52c3826fd0dc",
+    "mssr_v5/run_final_5seed.py": "d2c20ee4b0ccbab85029f2c03e18727a489ea1c74d53ab2cac0de5f10c4e48b4",
+    "mssr_v5/semantic_cache_io.py": "bfdc2e11ae204388c56f11fafe9d4020c58c2c305bd02a84b841aae35358b476",
+    "mssr_v5/cuda_backend.py": "4e418188b80fe111ce3d7ebbd42ef4e30c5f5fdbfe90c5d50be132b014d95e6f",
+    "benchmark_v2/task.py": "5186a872549955b702fe888123ed30b7d349ea58bba6fae23d286fc6c043fb94",
+    "benchmark_v2/data.py": "21a356eb8780c1d6e3dfd0cc30d72c24ce704a2fdb47d42a132e4c7e89eb6cbf",
+    "benchmark/graph_utils.py": "3c7cd90cb8ccc1955315cc4b31710f4467b51b2c9926de503e04de669f2a6c11",
+    "preprocess/build_unified_semantic_cache.py": "1bc37d595269d048904929625b58ff20d94c31880b39530290c3bbf8aee26607",
+    "mssr_v5/offline_timing.py": "6f460745548bc247749db4fee22851fd2faa87cd9ad2a2b832163a4bec54b3b0",
+    "mssr_v5/clip_embedding_timings.json": "85158d5ac56377cd16db7aa95e82caac63f2afec110fb50f86ab2ccf78f4b216"
+  },
+  "changes": [
+    "Internalize data loaders; drop unused baseline graph utilities and schema import.",
+    "Add configurable cache/schema paths and portable graph-store paths.",
+    "Preserve full run reports; fail on invalid datasets or failed jobs.",
+    "Add standalone demo and packaging metadata.",
+    "Expose existing CUDA backend via run_final_5seed --device and --threads, with fresh per-run relation caches.",
+    "Synchronize primary Offline CLIP accounting; bundle portable six-dataset min-of-five records and CSV; preserve configurable schema/cache paths and CPU/CUDA entry points."
+  ],
+  "historical_result_batch": "final_v5_6datasets_5seed_20261005",
+  "packaged_python_sha256": {
+    "mssr_v5/__init__.py": "232aad720866378ef5c1c5c2a7ccf5845709ffc63223802b2d59a483b91adb28",
+    "mssr_v5/aligned_fast.py": "97e98e3bceb532f8ed73204d803a612ac8b2d91b766070ad731fcbf144ae066e",
+    "mssr_v5/build_semantic_cache.py": "4c9031ca5ea9cfa59437fa83087c5638250eff625318edd537af4e00a579ea50",
+    "mssr_v5/cuda_backend.py": "4e418188b80fe111ce3d7ebbd42ef4e30c5f5fdbfe90c5d50be132b014d95e6f",
+    "mssr_v5/data.py": "86e7a171d9136b1e5e633ce367b0ee766885afe21603136bb13b99c4693e7dfe",
+    "mssr_v5/graph.py": "b0892deaa381e307f0d4c87af879289bb3c4c9d41c7cebf6ebecfbefda0e784b",
+    "mssr_v5/offline_timing.py": "6f460745548bc247749db4fee22851fd2faa87cd9ad2a2b832163a4bec54b3b0",
+    "mssr_v5/run_final_5seed.py": "f7ad7ca4dd276497320448683c14e43ec33d1249cf793c78661a1c33e17e19b3",
+    "mssr_v5/semantic_cache_io.py": "bfdc2e11ae204388c56f11fafe9d4020c58c2c305bd02a84b841aae35358b476",
+    "mssr_v5/task.py": "498ac64a9eaf32b6201c6740b9203fdf7bb550755ca01f0864f23762af387a15",
+    "tests/test_clip_offline.py": "786e094dfa489b59a61010624fe16b654f0418c72da3eb826106826d40d6762b",
+    "tests/test_offline_timing.py": "3bedf1b6d81e83d2df7393d17ad6b3109ae84962b2f6833b79ebdac072837600"
+  },
+  "updated_on": "2026-10-28",
+  "packaged_data_sha256": {
+    "mssr_v5/clip_embedding_timings.json": "ddfa6317f06c9a032e1ee2693b058c78c789b7a2c4c93ce14bb4046a79320791",
+    "mssr_v5/clip_embedding_times.csv": "3fa1b67b523889e6e0b398f7494a5f776146d83b8c98fae83c560c3da744f959"
+  },
+  "validation_before_clip_sync": {
+    "environment": "Isolated installed wheel, Linux, Python 3.13.13, NumPy 2.5.4",
+    "synthetic_demo": "Passed: 8 queries, 128 database graphs; Hits@1=MRR=1",
+    "unit_tests": "8 passed; 1 optional ISA-L test skipped",
+    "optional_cuda_backend": "Validated on all six full datasets with seed 3407 using CUDA backend, Python 3.10.20, NumPy 2.2.6, PyTorch 2.4.0+cu121, Tesla V100. First five tasks match all six accuracy metrics of historical seed3407; merged dbp15k_all uses a different corpus from the historical aggregate.",
+    "real_data_smoke": "Passed: FB15K-DB15K, seed 3407, 2 queries, 128 database graphs; empty failures.json and complete report/config verified. Not a full benchmark rerun."
+  },
+  "validation": {
+    "offline_accounting_tests": "4 passed in source checkout and 4 passed against independently installed wheel.",
+    "installed_package": "Built without dependencies; installed into isolated target; package JSON and CSV present.",
+    "six_real_inputs": "All six full task identities and original semantic-cache SHA-256 validated using installed package; selected minima match main workspace.",
+    "scope": "No new full retrieval benchmark or CLIP inference run in this synchronization."
+  }
+}

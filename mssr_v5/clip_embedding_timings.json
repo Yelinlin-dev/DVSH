@@ -1,0 +1,391 @@
+{
+  "format": "mssr_clip_fastest_v1",
+  "selection": "minimum_of_5_fresh_repeats",
+  "notes": "Fixed separately measured CLIP minimum; not contemporaneous end-to-end time. Model loading, input preparation, warmup and persistence excluded. Original files retained. Cache and measurement_record paths are provenance labels only; no original audit directory is required. Timing applies only to the verified graph set and cache hashes.",
+  "datasets": {
+    "dbp15k_all": {
+      "format": "clip_embedding_timing_v1",
+      "dataset": "dbp15k_all",
+      "scope": "test",
+      "model": "sentence-transformers/clip-ViT-B-32-multilingual-v1",
+      "model_revision": "58edf8cada9e398793dca955574a48cbb7f18be2",
+      "device": "cuda:0",
+      "device_name": "Tesla V100-SXM2-32GB",
+      "batch_size": 256,
+      "num_graphs": 68345,
+      "graph_ids_sha256": "ec9d924221df194ddca6ed4f1b63e2dd0c52097f605dc4d9deaa580f876380d1",
+      "texts_sha256": "7387b91c17eb0eeb828eb7fe24d2bda20d467da2a3dc69f1627d3dbb8516e835",
+      "source_cache": "cache/mssr_semantic/dbp15k_all.npz",
+      "source_cache_sha256": "505d3524b3ec83e3c98a7ec8fdb0bd8c406f989f15d08f074e3b016b027ecb26",
+      "semantic_cache": "original_measurement_outputs/dbp15k_all.npz",
+      "semantic_cache_sha256": "56c0fbae852d707dfd49c78fd67cd82fd836c2fe78d5a5ffa5ca72d2384951e0",
+      "missing_measured_ids_in_bound_cache": 0,
+      "reference_embeddings_verified": true,
+      "reference_comparison": {
+        "atol": 1e-05,
+        "rtol": 0.0001,
+        "num_graphs": 68345
+      },
+      "input_preparation_time_ms": 1438.6270744726062,
+      "model_load_time_ms": 715.0116553530097,
+      "warmup_time_ms": 330.45224472880363,
+      "warmup_batches": 1,
+      "cache_write_time_ms": 7444.089508615434,
+      "runs": [
+        {
+          "seed": 3407,
+          "embedding_generation_time_ms": 20098.157455213368,
+          "reference_max_abs_error": 3.5762786865234375e-07
+        },
+        {
+          "seed": 3408,
+          "embedding_generation_time_ms": 18953.08929309249,
+          "reference_max_abs_error": 3.5762786865234375e-07
+        },
+        {
+          "seed": 3409,
+          "embedding_generation_time_ms": 18682.94312991202,
+          "reference_max_abs_error": 3.5762786865234375e-07
+        },
+        {
+          "seed": 3410,
+          "embedding_generation_time_ms": 18389.39608912915,
+          "reference_max_abs_error": 3.5762786865234375e-07
+        },
+        {
+          "seed": 3411,
+          "embedding_generation_time_ms": 19209.644273854792,
+          "reference_max_abs_error": 3.5762786865234375e-07
+        }
+      ],
+      "embedding_generation_time_ms_mean": 19066.646048240364,
+      "embedding_generation_time_ms_std": 652.5440308005747,
+      "scope_definition": "unique graph IDs; text tokenization, encoder forward, normalization and CPU result transfer; model load, input preparation, warmup and persistence excluded",
+      "torch_version": "2.4.0+cu121",
+      "numpy_version": "2.2.6",
+      "script_sha256": "fb6db2f839f74126c8a63744dadf4a96cd8e7d7ce2cda29c37c11dc1e9a58ff7",
+      "measurement_record": "audits/clip_6datasets_fastest_20261028/dbp15k_all/dbp15k_all.test.timing.json",
+      "measurement_record_sha256": "509f1646e03d804252568f9b39585893738c7d7db1a4073735f95f6bbf237ee5"
+    },
+    "dbp15k_fr_en": {
+      "format": "clip_embedding_timing_v1",
+      "dataset": "dbp15k_fr_en",
+      "scope": "test",
+      "model": "sentence-transformers/clip-ViT-B-32-multilingual-v1",
+      "model_revision": "58edf8cada9e398793dca955574a48cbb7f18be2",
+      "device": "cuda:0",
+      "device_name": "Tesla V100-SXM2-32GB",
+      "batch_size": 256,
+      "num_graphs": 22993,
+      "graph_ids_sha256": "b67a89a29d5db752ede1e3aa8bcd2e3670e11295f63c7956522b4a63d27c09c3",
+      "texts_sha256": "87faf723d86cf08d1390b79c25c88f3901ab4fd6b54e581ceee2da69cb82e84d",
+      "source_cache": "cache/mssr_semantic/dbp15k_fr_en.npz",
+      "source_cache_sha256": "1457b779a81231814c5a649a66841ec36729832f33e7ca7c3e228f5ec562533c",
+      "semantic_cache": "original_measurement_outputs/dbp15k_fr_en.npz",
+      "semantic_cache_sha256": "84a93511971c8cdcda5f2b0451afb4b816351474edce0c50e65e958f514f9f80",
+      "missing_measured_ids_in_bound_cache": 0,
+      "reference_embeddings_verified": true,
+      "reference_comparison": {
+        "atol": 1e-05,
+        "rtol": 0.0001,
+        "num_graphs": 22993
+      },
+      "input_preparation_time_ms": 601.4704024419188,
+      "model_load_time_ms": 678.9784515276551,
+      "warmup_time_ms": 317.7080750465393,
+      "warmup_batches": 1,
+      "cache_write_time_ms": 2459.3772953376174,
+      "runs": [
+        {
+          "seed": 3407,
+          "embedding_generation_time_ms": 5266.850525513291,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3408,
+          "embedding_generation_time_ms": 5624.927144497633,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3409,
+          "embedding_generation_time_ms": 5315.515113994479,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3410,
+          "embedding_generation_time_ms": 5021.569860167801,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3411,
+          "embedding_generation_time_ms": 5056.94461800158,
+          "reference_max_abs_error": 2.980232238769531e-07
+        }
+      ],
+      "embedding_generation_time_ms_mean": 5257.161452434957,
+      "embedding_generation_time_ms_std": 242.0438035513177,
+      "scope_definition": "unique graph IDs; text tokenization, encoder forward, normalization and CPU result transfer; model load, input preparation, warmup and persistence excluded",
+      "torch_version": "2.4.0+cu121",
+      "numpy_version": "2.2.6",
+      "script_sha256": "fb6db2f839f74126c8a63744dadf4a96cd8e7d7ce2cda29c37c11dc1e9a58ff7",
+      "measurement_record": "audits/clip_6datasets_fastest_20261028/dbp15k_fr_en/dbp15k_fr_en.test.timing.json",
+      "measurement_record_sha256": "8633574270dbe44e2153e659f586eb194a63bfa6470e599e3a397125c8f37fcb"
+    },
+    "dbp15k_ja_en": {
+      "format": "clip_embedding_timing_v1",
+      "dataset": "dbp15k_ja_en",
+      "scope": "test",
+      "model": "sentence-transformers/clip-ViT-B-32-multilingual-v1",
+      "model_revision": "58edf8cada9e398793dca955574a48cbb7f18be2",
+      "device": "cuda:0",
+      "device_name": "Tesla V100-SXM2-32GB",
+      "batch_size": 256,
+      "num_graphs": 22780,
+      "graph_ids_sha256": "0710ce0d2bc9b1d8fcd198ff1aa888fd2a8119dc32ab9e6fd40a71b2b66d499b",
+      "texts_sha256": "814c109e68fb47132295d677657453c309bdb30c62b579b5018ba476e94ee52a",
+      "source_cache": "cache/mssr_semantic/dbp15k_ja_en.npz",
+      "source_cache_sha256": "a4663034194e50df025d47e725f4e32d7567c272465e6682b9c6ecd705bf9a0a",
+      "semantic_cache": "original_measurement_outputs/dbp15k_ja_en.npz",
+      "semantic_cache_sha256": "6fd5cb1997616b4f635be975d5dae49bee8a2e0c6a06cdea6d138ab60df7afd3",
+      "missing_measured_ids_in_bound_cache": 0,
+      "reference_embeddings_verified": true,
+      "reference_comparison": {
+        "atol": 1e-05,
+        "rtol": 0.0001,
+        "num_graphs": 22780
+      },
+      "input_preparation_time_ms": 639.6339265629649,
+      "model_load_time_ms": 730.9022136032581,
+      "warmup_time_ms": 350.50819627940655,
+      "warmup_batches": 1,
+      "cache_write_time_ms": 2478.0065957456827,
+      "runs": [
+        {
+          "seed": 3407,
+          "embedding_generation_time_ms": 6201.557766646147,
+          "reference_max_abs_error": 4.172325134277344e-07
+        },
+        {
+          "seed": 3408,
+          "embedding_generation_time_ms": 6702.448226511478,
+          "reference_max_abs_error": 4.172325134277344e-07
+        },
+        {
+          "seed": 3409,
+          "embedding_generation_time_ms": 6730.166799388826,
+          "reference_max_abs_error": 4.172325134277344e-07
+        },
+        {
+          "seed": 3410,
+          "embedding_generation_time_ms": 6217.9100485518575,
+          "reference_max_abs_error": 4.172325134277344e-07
+        },
+        {
+          "seed": 3411,
+          "embedding_generation_time_ms": 6724.000763148069,
+          "reference_max_abs_error": 4.172325134277344e-07
+        }
+      ],
+      "embedding_generation_time_ms_mean": 6515.216720849276,
+      "embedding_generation_time_ms_std": 279.11608079779444,
+      "scope_definition": "unique graph IDs; text tokenization, encoder forward, normalization and CPU result transfer; model load, input preparation, warmup and persistence excluded",
+      "torch_version": "2.4.0+cu121",
+      "numpy_version": "2.2.6",
+      "script_sha256": "fb6db2f839f74126c8a63744dadf4a96cd8e7d7ce2cda29c37c11dc1e9a58ff7",
+      "measurement_record": "audits/clip_6datasets_fastest_20261028/dbp15k_ja_en/dbp15k_ja_en.test.timing.json",
+      "measurement_record_sha256": "5949e9124b994f5150b1218c6208d9b8d145c941a5de3c2a2924e57c8996f143"
+    },
+    "dbp15k_zh_en": {
+      "format": "clip_embedding_timing_v1",
+      "dataset": "dbp15k_zh_en",
+      "scope": "test",
+      "model": "sentence-transformers/clip-ViT-B-32-multilingual-v1",
+      "model_revision": "58edf8cada9e398793dca955574a48cbb7f18be2",
+      "device": "cuda:0",
+      "device_name": "Tesla V100-SXM2-32GB",
+      "batch_size": 256,
+      "num_graphs": 22572,
+      "graph_ids_sha256": "e78dfb8fa179f1a6f496e3377b0293e89edbf201f49311d28562c16f6ac287a4",
+      "texts_sha256": "bb13eecfcbb0a92f1c840332c535f8d8c01c60c31c788d11feee7d8ce239776b",
+      "source_cache": "cache/mssr_semantic/dbp15k_zh_en.npz",
+      "source_cache_sha256": "c0eb3df2d88130a74f7c0e4bc5a95709a43e9d0d95b242a359689aae6dc841d2",
+      "semantic_cache": "original_measurement_outputs/dbp15k_zh_en.npz",
+      "semantic_cache_sha256": "52c3f93146e0dabd19b11a7f5761649abdf62d53a573aed6df8accb8516f99e4",
+      "missing_measured_ids_in_bound_cache": 0,
+      "reference_embeddings_verified": true,
+      "reference_comparison": {
+        "atol": 1e-05,
+        "rtol": 0.0001,
+        "num_graphs": 22572
+      },
+      "input_preparation_time_ms": 631.6739842295647,
+      "model_load_time_ms": 875.2491530030966,
+      "warmup_time_ms": 408.73628947883844,
+      "warmup_batches": 1,
+      "cache_write_time_ms": 5673.700955696404,
+      "runs": [
+        {
+          "seed": 3407,
+          "embedding_generation_time_ms": 6264.414164237678,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3408,
+          "embedding_generation_time_ms": 6181.693225167692,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3409,
+          "embedding_generation_time_ms": 6572.2673600539565,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3410,
+          "embedding_generation_time_ms": 5964.061804115772,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3411,
+          "embedding_generation_time_ms": 6025.358889251947,
+          "reference_max_abs_error": 2.980232238769531e-07
+        }
+      ],
+      "embedding_generation_time_ms_mean": 6201.559088565409,
+      "embedding_generation_time_ms_std": 239.3854141209241,
+      "scope_definition": "unique graph IDs; text tokenization, encoder forward, normalization and CPU result transfer; model load, input preparation, warmup and persistence excluded",
+      "torch_version": "2.4.0+cu121",
+      "numpy_version": "2.2.6",
+      "script_sha256": "fb6db2f839f74126c8a63744dadf4a96cd8e7d7ce2cda29c37c11dc1e9a58ff7",
+      "measurement_record": "audits/clip_6datasets_fastest_20261028/dbp15k_zh_en/dbp15k_zh_en.test.timing.json",
+      "measurement_record_sha256": "5bf415755cbb1cdfe295b7cdb89259811d0a658726a4c29eae2836e732f749ee"
+    },
+    "fb15k_db15k": {
+      "format": "clip_embedding_timing_v1",
+      "dataset": "fb15k_db15k",
+      "scope": "test",
+      "model": "sentence-transformers/clip-ViT-B-32-multilingual-v1",
+      "model_revision": "58edf8cada9e398793dca955574a48cbb7f18be2",
+      "device": "cuda:0",
+      "device_name": "Tesla V100-SXM2-32GB",
+      "batch_size": 256,
+      "num_graphs": 15412,
+      "graph_ids_sha256": "12e41d94cec78edfc1c3f2b241d3b88946f500ae23725cc2e07cf670533fc973",
+      "texts_sha256": "934f9a480386e7db961e7d2807eab57573e23d73a57c17c1f12fc5537279a3c6",
+      "source_cache": "cache/mssr_semantic/fb15k_db15k.npz",
+      "source_cache_sha256": "1237a228d1f58c5fdf7d6336cf9a63f17e12831e3a9bdf395af59d985bcad265",
+      "semantic_cache": "original_measurement_outputs/fb15k_db15k.npz",
+      "semantic_cache_sha256": "3455568f974bf4572c8be59fad9e3fba4e44b2f4bfebab52d5c8b11cfc1deb82",
+      "missing_measured_ids_in_bound_cache": 0,
+      "reference_embeddings_verified": true,
+      "reference_comparison": {
+        "atol": 1e-05,
+        "rtol": 0.0001,
+        "num_graphs": 15412
+      },
+      "input_preparation_time_ms": 494.63012255728245,
+      "model_load_time_ms": 681.1530543491244,
+      "warmup_time_ms": 358.36140997707844,
+      "warmup_batches": 1,
+      "cache_write_time_ms": 1703.114490956068,
+      "runs": [
+        {
+          "seed": 3407,
+          "embedding_generation_time_ms": 3717.6210079342127,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3408,
+          "embedding_generation_time_ms": 3804.765125736594,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3409,
+          "embedding_generation_time_ms": 3691.2378100678325,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3410,
+          "embedding_generation_time_ms": 3872.0624540001154,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3411,
+          "embedding_generation_time_ms": 3828.482677228749,
+          "reference_max_abs_error": 2.980232238769531e-07
+        }
+      ],
+      "embedding_generation_time_ms_mean": 3782.8338149935007,
+      "embedding_generation_time_ms_std": 76.10697956848392,
+      "scope_definition": "unique graph IDs; text tokenization, encoder forward, normalization and CPU result transfer; model load, input preparation, warmup and persistence excluded",
+      "torch_version": "2.4.0+cu121",
+      "numpy_version": "2.2.6",
+      "script_sha256": "fb6db2f839f74126c8a63744dadf4a96cd8e7d7ce2cda29c37c11dc1e9a58ff7",
+      "measurement_record": "audits/clip_6datasets_fastest_20261028/fb15k_db15k/fb15k_db15k.test.timing.json",
+      "measurement_record_sha256": "fcb1ae1fe0851e43527ca44c6bdf90dc2971405cdcffec8b78f6c94f5988a968"
+    },
+    "fb15k_yago15k": {
+      "format": "clip_embedding_timing_v1",
+      "dataset": "fb15k_yago15k",
+      "scope": "test",
+      "model": "sentence-transformers/clip-ViT-B-32-multilingual-v1",
+      "model_revision": "58edf8cada9e398793dca955574a48cbb7f18be2",
+      "device": "cuda:0",
+      "device_name": "Tesla V100-SXM2-32GB",
+      "batch_size": 256,
+      "num_graphs": 17645,
+      "graph_ids_sha256": "ee6c2c97c7734339ddcb398d94db502a5bee6e971a427cf0e8ca57fedf75b8b2",
+      "texts_sha256": "0696ba147e6a131caffeced436eca8e8177fcdf8cebe5790ade4cb8d59d9e31c",
+      "source_cache": "cache/mssr_semantic/fb15k_yago15k.npz",
+      "source_cache_sha256": "aac2c6e3a14ab7e0c7eeb200c13261a43de6ad77b5824371783c4e828f21718c",
+      "semantic_cache": "original_measurement_outputs/fb15k_yago15k.npz",
+      "semantic_cache_sha256": "a17bc738f199b9052b26c8a3c3d911b8599eb31271deb416ed3abe1a26a66ac1",
+      "missing_measured_ids_in_bound_cache": 0,
+      "reference_embeddings_verified": true,
+      "reference_comparison": {
+        "atol": 1e-05,
+        "rtol": 0.0001,
+        "num_graphs": 17645
+      },
+      "input_preparation_time_ms": 560.7736296951771,
+      "model_load_time_ms": 774.4398321956396,
+      "warmup_time_ms": 336.21842972934246,
+      "warmup_batches": 1,
+      "cache_write_time_ms": 1984.5308754593134,
+      "runs": [
+        {
+          "seed": 3407,
+          "embedding_generation_time_ms": 4038.3067121729255,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3408,
+          "embedding_generation_time_ms": 4130.81325031817,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3409,
+          "embedding_generation_time_ms": 4213.5283052921295,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3410,
+          "embedding_generation_time_ms": 4072.5522814318538,
+          "reference_max_abs_error": 2.980232238769531e-07
+        },
+        {
+          "seed": 3411,
+          "embedding_generation_time_ms": 3740.415934473276,
+          "reference_max_abs_error": 2.980232238769531e-07
+        }
+      ],
+      "embedding_generation_time_ms_mean": 4039.123296737671,
+      "embedding_generation_time_ms_std": 179.70003248153745,
+      "scope_definition": "unique graph IDs; text tokenization, encoder forward, normalization and CPU result transfer; model load, input preparation, warmup and persistence excluded",
+      "torch_version": "2.4.0+cu121",
+      "numpy_version": "2.2.6",
+      "script_sha256": "fb6db2f839f74126c8a63744dadf4a96cd8e7d7ce2cda29c37c11dc1e9a58ff7",
+      "measurement_record": "audits/clip_6datasets_fastest_20261028/fb15k_yago15k/fb15k_yago15k.test.timing.json",
+      "measurement_record_sha256": "379ab816266792f8dd43ae874ef533886e9cfc785247c74fcd289989d2022168"
+    }
+  }
+}

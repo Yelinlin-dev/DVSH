@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mssr-v5"
+version = "0.1.0"
+description = "Binary semantic LSH retrieval with aligned relation reranking"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+fast = ["isal==1.8.0"]
+semantic = ["sentence-transformers>=2.2"]
+cuda = ["torch>=2.0"]
+
+[tool.setuptools.packages.find]
+include = ["mssr_v5*"]
+
+[tool.setuptools.package-data]
+mssr_v5 = ["clip_embedding_timings.json", "clip_embedding_times.csv"]
